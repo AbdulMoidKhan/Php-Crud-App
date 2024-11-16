@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+</head>
+<body>
+    <form action="indexinsert.php" method="post">
+        <label >Name</label>
+        <input type="text" name="name">
+        
+        <br><br>
+
+        <label >Date of Birth</label>
+        <input type="date" name="dob">
+        
+        <br><br>
+
+        <label >Gender</label>
+        <br>
+        <label >Male</label>
+        <input type="radio" name="gender" value="male">
+        <label >Female</label>
+        <input type="radio" name="gender" value="female">
+        
+        <br><br>
+
+        <label >Country</label>
+        <select name="country" id="">
+            <option value="pakistan">Pakistan</option>
+            <option value="india">India</option>
+        </select>
+
+        <br><br>
+
+        <label >Fav Color</label>
+        <input type="color" name="color">
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    
+</body>
+</html>
