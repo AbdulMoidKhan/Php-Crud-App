@@ -22,15 +22,23 @@ $result = $con->query($sql);
             <th>Country</th>
             <th>Fav Color</th>
             <th>Created At</th>
+            <th>Delete</th>
+            <th>Update</th>
         </tr>
         <?php while ($row = $result->fetch_assoc()): ?>
-        <tr>
+        <tr >
             <td><?php echo $row['name']; ?></td>
             <td><?php echo $row['dob']; ?></td>
             <td><?php echo $row['gender']; ?></td>
             <td><?php echo $row['country']; ?></td>
-            <td><?php echo $row['fav_color']; ?></td>
+            <td style="
+            color:<?php echo $row['fav_color']; ?>; 
+            background-color:<?php echo $row['fav_color']; ?>;">COLOR</td>
             <td><?php echo $row['created_at']; ?></td>
+            <?php
+            echo '<td><a href="delete.php?kuchbhi='.$row["id"].'">Delete</a></td>';
+            echo '<td><a href="update.php?updateData='.$row["id"].'">Update</a></td>';
+            ?>
         </tr>
         <?php endwhile;  ?>
     </table>

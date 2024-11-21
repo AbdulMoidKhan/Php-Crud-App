@@ -3,7 +3,7 @@
 require "includes/db.php";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $name = $_POST['name'];
+    $name = trim($_POST['name']);
     $dob = $_POST['dob'];
     $gender = $_POST['gender'];
     $country = $_POST['country'];
